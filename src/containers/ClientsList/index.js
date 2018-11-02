@@ -22,19 +22,7 @@ class ClientsList extends Component {
     static defaultProps = {
         currentViewableClientID: null,
     };
-    // componentDidMount() {
-    //     fetch('../../middlewares/clients.json')
-    //         .then(result => result.json())
-    //         .then(data => {
-    //             let dataResult = data.result.map((res) => {
-    //                 return(
-    //                     <div key={res.result}></div>
-    //                 )
-    //             })
-    //             this.setState({data:dataResult});
-    //         })
-    // }
-
+    
     handleEditClick = event => {
         event.stopPropagation();
 
