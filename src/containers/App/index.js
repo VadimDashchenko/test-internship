@@ -26,15 +26,12 @@ const enhance = compose(
 
 const App = () => (
     <div className="App">
-        {/*<div className="App-form">*/}
-            {/*<ClientForm />*/}
-        {/*</div>*/}
         <div className="App-content">
             <div className="App-clientsList">
                 <ClientsSearchContainer />
                 <ClientsList />
             </div>
-            <div className="App-clientsProfile">
+            <div className="App-clientsDetail">
                 <ClientsDetail />
             </div>
         </div>

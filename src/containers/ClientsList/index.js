@@ -3,6 +3,7 @@ import * as PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { Image, List } from 'semantic-ui-react';
+import 'semantic-ui-css/semantic.min.css';
 
 import * as clientsActions from '../../actions/clients';
 import { getFilteredClientsList, getCurrentViewableClientID } from '../../selectors/clients';
@@ -54,24 +55,27 @@ class ClientsList extends Component {
 
         return (
             <ul className="ClientsList">
-                {clientsList.map(({  id,email, name }) => {
+                {clientsList.map(({  id, company, name }) => {
                     const listItemClassName = classNames('ClientsList-item', {
                         isActive: id === currentViewableClientID,
                     });
 
                     return (
+                        <li >
                             <List celled >
                                 <List.Item classname={listItemClassName}
-                                           key={name}
+                                           key={id}
                                            data-client-id={id}
                                            onClick={this.handleShowClick}>
-                                    <Image avatar src='https://react.semantic-ui.com/images/avatar/small/helen.jpg' />
+                                    <Image size="mini" src='https://react.semantic-ui.com/images/avatar/small/helen.jpg' />
                                     <List.Content>
                                         <List.Header><strong>{name}</strong></List.Header>
-                                        {email}
+                                        {company}
                                     </List.Content>
                                 </List.Item>
                             </List>
+                        </li>
+
 
                         // <li
                         //     className={listItemClassName}

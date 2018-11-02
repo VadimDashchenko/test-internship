@@ -1,18 +1,19 @@
 .App {
   &-content {
     display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.4);
+    margin: 20px;
   }
 
   &-clientsList {
-    flex-grow: 1;
-    padding-right: 1rem;
+    padding-right: 40px;
   }
 
   &-clientsDetail {
-    padding-left: 1rem;
+    padding-top: 80px;
     min-width: 30vw;
-    border: 1px solid #000;
+    width: 100%;
   }
 }
