@@ -4,7 +4,7 @@ import { compose, lifecycle } from 'recompose';
 
 import * as clientsActions from '../../actions/clients';
 
-import ClientForm from '../ClientForm';
+//import ClientForm from '../ClientForm';
 import ClientsList from '../ClientsList';
 import ClientsDetail from '../ClientsDetail';
 import ClientsSearchContainer from '../ClientsSearchContainer';
@@ -26,9 +26,9 @@ const enhance = compose(
 
 const App = () => (
     <div className="App">
-        <div className="App-form">
-            <ClientForm />
-        </div>
+        {/*<div className="App-form">*/}
+            {/*<ClientForm />*/}
+        {/*</div>*/}
         <div className="App-content">
             <div className="App-clientsList">
                 <ClientsSearchContainer />

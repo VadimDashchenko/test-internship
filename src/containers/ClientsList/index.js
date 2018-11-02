@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import * as PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
+import { Image, List } from 'semantic-ui-react';
 
 import * as clientsActions from '../../actions/clients';
 import { getFilteredClientsList, getCurrentViewableClientID } from '../../selectors/clients';
@@ -53,24 +54,37 @@ class ClientsList extends Component {
 
         return (
             <ul className="ClientsList">
-                {clientsList.map(({  id,picture, general }) => {
+                {clientsList.map(({  id,email, name }) => {
                     const listItemClassName = classNames('ClientsList-item', {
                         isActive: id === currentViewableClientID,
                     });
 
                     return (
-                        <li
-                            className={listItemClassName}
-                            key={id}
-                            data-client-id={id}
-                            onClick={this.handleShowClick}
-                        >
-                            <strong>{general}</strong>
-                            <img src={picture} alt=""/>
-                            <button type="button" data-client-id={id} onClick={this.handleEditClick}>
-                                Edit
-                            </button>
-                        </li>
+                            <List celled >
+                                <List.Item classname={listItemClassName}
+                                           key={name}
+                                           data-client-id={id}
+                                           onClick={this.handleShowClick}>
+                                    <Image avatar src='https://react.semantic-ui.com/images/avatar/small/helen.jpg' />
+                                    <List.Content>
+                                        <List.Header><strong>{name}</strong></List.Header>
+                                        {email}
+                                    </List.Content>
+                                </List.Item>
+                            </List>
+
+                        // <li
+                        //     className={listItemClassName}
+                        //     key={id}
+                        //     data-client-id={id}
+                        //     onClick={this.handleShowClick}
+                        // >
+                        //     <strong>{name}</strong>
+                        //     <img src={picture} alt=""/>
+                        //     <button type="button" data-client-id={id} onClick={this.handleEditClick}>
+                        //         Edit
+                        //     </button>
+                        // </li>
                     );
                 })}
             </ul>
@@ -87,3 +101,5 @@ export default connect(
     mapStateToProps,
     clientsActions,
 )(ClientsList);
+
+
