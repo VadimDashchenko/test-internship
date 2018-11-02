@@ -25,31 +25,6 @@ const ClientsDetail = ({ client: { id, name,company, email, address, phone } }) 
             <Card.Description>{phone}</Card.Description>
         </List.Content>
     </List>
-
-
-
-    // <Item.Group >
-    // <Item className="ClientDetail">
-    //     <img  src="https://react.semantic-ui.com/images/avatar/small/helen.jpg" alt=""/>
-    //
-    //     <Item.Content>
-    //         <Item.Header>{name}</Item.Header>
-    //         <Item.Meta>
-    //             <span>{email}</span>
-    //         </Item.Meta>
-    //         <Item.Description></Item.Description>
-    //     </Item.Content>
-    // </Item>
-    // </Item.Group>
-
-
-
-    // {/*<dl className="ClientDetail">*/}
-    //     {/*<dt>Client ID:</dt>*/}
-    //     {/*<dd>{id}</dd>*/}
-    //     {/*<dt>Name:</dt>*/}
-    //     {/*<dd>{name}</dd>*/}
-    // {/*</dl>*/}
 );
 
 ClientsDetail.propTypes = {
