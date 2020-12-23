@@ -28,7 +28,6 @@ const App = () => (
     <div className="App">
         <div className="App-content">
             <div className="App-clientsList">
-                <h2>Testing git commands</h2>
                 <ClientsSearchContainer />
                 <ClientsList />
             </div>
